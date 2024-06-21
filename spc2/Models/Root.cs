@@ -1,4 +1,4 @@
-﻿namespace spc2;
+﻿namespace spc2.Models;
 
 public class Feature
 {

@@ -1,3 +1,5 @@
+namespace spc2.Models;
+
 public class Day2 : IDay
 {
     private static readonly TimeOnly _firstReleaseTime = new TimeOnly(1, 0);

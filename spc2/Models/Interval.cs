@@ -1,3 +1,5 @@
+namespace spc2.Models;
+
 public class Interval
 {
     public Interval(DateTime start, DateTime end)

@@ -1,17 +1,14 @@
-using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Extensions.Caching.Memory;
-using Models;
-using Service;
+using spc2.Models;
+using spc2.Service;
 
 namespace spc2.Controllers;
 
 [Route("api/")]
 [ApiController]
-public class SpcController(IMemoryCache memoryCache, IConvectiveOutlookService convectiveOutlookService) : ControllerBase
+public class SpcController(IConvectiveOutlookService convectiveOutlookService) : ControllerBase
 {
-    private readonly IMemoryCache _memoryCache = memoryCache;
     private readonly IConvectiveOutlookService _convectiveOutlookService = convectiveOutlookService;
 
     [HttpGet("day/{dayNumber}")]

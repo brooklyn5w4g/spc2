@@ -1,4 +1,4 @@
-using Models;
+namespace spc2.Models;
 
 public class DayFactory
 {

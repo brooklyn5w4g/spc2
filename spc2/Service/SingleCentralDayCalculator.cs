@@ -1,3 +1,7 @@
+using spc2.Models;
+
+namespace spc2.Service;
+
 public class SingleCentralDayCalculator(TimeOnly centralReleaseTimeOnly)
 {
     private readonly TimeOnly _centralReleaseTimeOnly = centralReleaseTimeOnly;

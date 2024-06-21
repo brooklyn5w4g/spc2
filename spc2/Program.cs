@@ -1,15 +1,10 @@
-using Models;
-using Microsoft.EntityFrameworkCore;
-using Service;
-using spc2;
+using spc2.Service;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<SpcContext>(opt =>
-    opt.UseInMemoryDatabase("SPC"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -17,7 +12,7 @@ builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<IUrlService, UrlService>();
 builder.Services.AddSingleton<IConvectiveOutlookService, ConvectiveOutlookService>();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

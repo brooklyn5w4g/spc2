@@ -1,12 +1,10 @@
-﻿
-
-namespace spc2;
-
+﻿namespace spc2.Service;
 
 public interface IUrlService
 {
     string GetUrl(int dayNumber, DateTime actualStart, DateTime now);
 }
+
 public class UrlService : IUrlService
 {
     public string GetUrl(int dayNumber, DateTime actualStart, DateTime now)

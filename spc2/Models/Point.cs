@@ -1,12 +1,7 @@
-namespace Models;
-public class Point
-{
-    public double X { get; set; }
-    public double Y { get; set; }
+namespace spc2.Models;
 
-    public Point(double x, double y)
-    {
-        X = x;
-        Y = y;
-    }
+public class Point(double x, double y)
+{
+    public double X { get; set; } = x;
+    public double Y { get; set; } = y;
 }

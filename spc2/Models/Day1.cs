@@ -1,4 +1,4 @@
-namespace Models;
+namespace spc2.Models;
 
 public class Day1 : IDay
 {

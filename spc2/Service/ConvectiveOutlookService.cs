@@ -1,8 +1,7 @@
 using Microsoft.Extensions.Caching.Memory;
-using Models;
-using spc2;
+using spc2.Models;
 
-namespace Service;
+namespace spc2.Service;
 
 public interface IConvectiveOutlookService
 {

@@ -1,3 +1,7 @@
+using spc2.Service;
+
+namespace spc2.Models;
+
 public class Day4 : IDay
 {
     private static readonly SingleCentralDayCalculator _dayCalculator = new SingleCentralDayCalculator(new TimeOnly(4, 0));

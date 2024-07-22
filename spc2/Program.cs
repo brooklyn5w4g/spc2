@@ -1,3 +1,4 @@
+using Azure.Monitor.OpenTelemetry.AspNetCore;
 using spc2.Service;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<IUrlService, UrlService>();
 builder.Services.AddSingleton<IConvectiveOutlookService, ConvectiveOutlookService>();
+builder.Services.AddOpenTelemetry().UseAzureMonitor();
 
 WebApplication app = builder.Build();
 
